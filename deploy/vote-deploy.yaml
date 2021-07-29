@@ -6,7 +6,7 @@ metadata:
     app: vote
   name: vote
 spec:
-  replicas: 4
+  replicas: 8
   selector:
     matchLabels:
       app: vote
@@ -18,7 +18,7 @@ spec:
         app: vote
     spec:
       containers:
-      - image: schoolofdevops/vote
+      - image: schoolofdevops/vote: v8
         name: vote
         ports:
         - containerPort: 80
